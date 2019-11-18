@@ -208,6 +208,15 @@ public class AudioPlayer: NSObject {
             player?.volume = volume
         }
     }
+    
+    public var isMuted: Bool {
+        get {
+            return player?.isMuted ?? false
+        }
+        set {
+            player?.isMuted = newValue
+        }
+    }
 
     /// Defines the rate of the player. Default value is 1.
     public var rate = Float(1) {
